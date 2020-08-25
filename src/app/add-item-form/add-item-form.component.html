@@ -1,0 +1,16 @@
+<form #itemForm ="ngForm" (ngSubmit)="onSubmit(itemForm)" >
+    <div class="field is-narrow">
+  <p class="control">
+    <input class="input" required name='amount' style="width: 100px;" type="number" [ngModel]="item.amount"  placeholder="Amount" >
+  </p>
+</div>
+ <div class="field is-narrow">
+  <p class="control">
+    <input class="input" required name="description" type="text" [ngModel]="item.description" placeholder="Description" >
+  </p>
+</div>
+
+<div class="field">
+ <button type="submit" class="button is-primary" [disabled]='!itemForm.valid'>Add</button>
+</div>
+</form>
